@@ -1,0 +1,24 @@
+server:
+  port: 7777
+
+rocketmq:
+  producer:
+    groupName: vehicleProducerGroup
+    namesrvAddr: 127.0.0.1:9876
+    instanceName: shusakuProducer
+    topic: topic2019
+    tag: test
+    maxMessageSize: 131072
+    sendMsgTimeout: 10000
+
+  consumer:
+    namesrvAddr: 127.0.0.1:9876
+    groupName: vehicleProducerGroup
+    topic: topic2019
+    tag: test
+    consumeThreadMin: 20
+    consumeThreadMax: 64
+
+#  namesrv:
+#    domain: 127.0.0.1
+#      subgroup:
